@@ -1,0 +1,17 @@
+{
+  "name": "auto-timecard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "build": "electron-packager . attendance-recorder --platform=darwin --arch=x64 --electron-version=1.4.13"
+  },
+  "keywords": [],
+  "author": "gacktomo",
+  "license": "MIT",
+  "dependencies": {
+    "electron-json-storage": "^4.0.2",
+    "menubar": "^5.2.3"
+  }
+}
