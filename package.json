@@ -5,12 +5,13 @@
   "main": "main.js",
   "scripts": {
     "start": "node_modules/.bin/electron .",
-    "build": "electron-packager . attendance-recorder --platform=darwin --arch=x64 --electron-version=1.4.13"
+    "build": "electron-packager . auto-timecard --platform=darwin --arch=x64 --electron-version=1.4.13 --ignore auto-timecard-darwin-x64 --icon=images/icon.icns --overwrite"
   },
   "keywords": [],
   "author": "gacktomo",
   "license": "MIT",
   "dependencies": {
+    "auto-launch": "^5.0.5",
     "electron-json-storage": "^4.0.2",
     "menubar": "^5.2.3"
   }
