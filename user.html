@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="js/user.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>社員情報</title>
+</head>
+<body>
+  <div class="container" style="margin-top: 20px;width:90%">
+    <div class="row">
+      <h3 style="">氏名</h3>
+      <input id="last-name" type="text" class="form-control" placeholder="姓">
+      <input id="first-name" type="text" class="form-control" placeholder="名">
+      <input id="last-kana" type="text" class="form-control" placeholder="姓（カナ）">
+      <input id="first-kana" type="text" class="form-control" placeholder="名（カナ）">
+      <br>
+      <br>
+
+      <h3 style="">振込先</h3>
+      <input id="bank-name" type="text" class="form-control" placeholder="銀行名">
+      <input id="part-name" type="text" class="form-control" placeholder="支店名">
+      <input id="bank-type" type="text" class="form-control" placeholder="預金種目">
+      <input id="bank-number" type="text" class="form-control" placeholder="口座番号">
+      <input id="bank-user" type="text" class="form-control" placeholder="口座名" style="display:none;">
+      <br>
+      <br>
+
+      <h3 style="">業務内容の文言</h3>
+      <input id="work-text" type="text" class="form-control" placeholder="内容">
+      <br>
+      <br>
+
+      <button id="submit" class="btn btn-outline-secondary" style="height:40px;">
+        <center>
+          保存
+        </center>
+      </button>
+      <br>
+      <br>
+      <p id="message" style="margin-left:10px;"></p>
+      <br>
+
+    </div>
+  </div>
+</body>
+</html>

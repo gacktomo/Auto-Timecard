@@ -59,6 +59,17 @@ var showCard = function () {
   win.once('ready-to-show', () => { win.show() })
 } 
 
+var showUserInfo = function () { 
+  const win = new BrowserWindow({
+    "show": false,
+    "width": 335, 
+    "height": 680,
+    "minWidth":335
+  });
+  win.loadURL('file://' + __dirname + '/user.html')
+  win.once('ready-to-show', () => { win.show() })
+} 
+
 let tray = null
 app.on('ready', function() {
   tray = new Tray(__dirname + "/images/IconTemplate.png");
@@ -69,6 +80,10 @@ app.on('ready', function() {
     { 
       label: "タイムカードを表示", 
       click: showCard
+    },
+    { 
+      label: "社員情報を編集", 
+      click: showUserInfo
     },
     { 
       label: "アプリケーションを終了", 
@@ -82,4 +97,7 @@ app.on('ready', function() {
 
 ipcMain.on('userpath-req', function(event, arg) {
   event.sender.send('userpath-res', app.getPath('userData'));
+});
+ipcMain.on('userinfo-open', function(event, arg) {
+  showUserInfo();
 });
