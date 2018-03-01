@@ -13,6 +13,9 @@
   "dependencies": {
     "auto-launch": "^5.0.5",
     "electron-json-storage": "^4.0.2",
-    "menubar": "^5.2.3"
+    "menubar": "^5.2.3",
+    "xlsx": "^0.12.3",
+    "xlsx-style": "^0.8.13",
+    "xlsx-style-custom": "^0.8.14"
   }
 }

@@ -1,8 +1,14 @@
 'use strict';
-const {BrowserWindow, app, Menu, Tray} = require("electron");
+const {BrowserWindow, app, Menu, Tray, ipcMain} = require("electron");
 const storage = require('electron-json-storage');
 const AutoLaunch = require('auto-launch');
 const os = require('os');
+const fs = require('fs');
+let _userpath = app.getPath('userData');
+
+fs.mkdir(_userpath + "/xlsx", function(err) {
+  if (err) { return 1; }
+});
 
 if(os.platform()=="darwin"){
   var launcher = new AutoLaunch({
@@ -73,3 +79,7 @@ app.on('ready', function() {
   tray.setContextMenu(contextMenu);
   app.dock.hide();
 })
+
+ipcMain.on('userpath-req', function(event, arg) {
+  event.sender.send('userpath-res', app.getPath('userData'));
+});
